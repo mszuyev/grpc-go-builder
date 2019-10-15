@@ -1,20 +1,20 @@
 ### grpc-go-builder
 
-Image to compile GRPC .proto files for Golang
+Image to compile GRPC .proto files for Golang v.1.13
 
 ### How to run
 
 basic example:
 
 ```
-IMAGE_NAME=go-protoc-gen:1.12
+IMAGE_NAME=go-protoc-gen:1.13
 PROJECT_DIR=my-awesome-project # subfolder of $GOPATH/src with your project
 
 docker container run \
        -v "$GOPATH/src/$PROJECT_DIR":"/go/src/$PROJECT_DIR" \
        --rm -it \
        --name grpc-go-builder \
-       mszuyev/grpc-go-builder:1.12 \
+       mszuyev/grpc-go-builder:1.13 \
        /bin/sh -c "cd /go/src/$PROJECT_DIR && ./generate.sh"
 ```
 
