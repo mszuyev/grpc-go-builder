@@ -1,4 +1,4 @@
-FROM golang:1.12-alpine
+FROM golang:1.13-alpine
 RUN apk update \
     && apk add --no-cache bash mc git protobuf-dev \
     && go get -u -v -ldflags '-w -s' \
